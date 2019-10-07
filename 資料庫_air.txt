@@ -1,0 +1,71 @@
+create database air
+on 
+primary (
+name = 'air',
+filename = 'd:\db\air.mdf')
+log on (
+name = 'air_log',
+filename = 'd:\db\air_log.ldf');
+
+use air;
+
+create table 一氧化碳
+(編號 int not null,
+年月 int not null,
+監測項目 varchar(20) null,
+監測站 varchar(20) null,
+監測站編號 varchar(20) null,
+月平均 float null,
+primary key (編號));
+
+create table 二氧化硫
+(編號 int not null,
+年月 int not null,
+監測項目 varchar(20) null,
+監測站 varchar(20) null,
+監測站編號 varchar(20) null,
+月平均 float null,
+primary key (編號));
+
+create table 二氧化氮
+(編號 int not null,
+年月 int not null,
+監測項目 varchar(20) null,
+監測站 varchar(20) null,
+監測站編號 varchar(20) null,
+月平均 float null,
+primary key (編號));
+
+create table 非甲烷碳氫化合物
+(編號 int not null,
+年月 int not null,
+監測項目 varchar(20) null,
+監測站 varchar(20) null,
+監測站編號 varchar(20) null,
+月平均 float null,
+primary key (編號));
+
+create table 臭氧
+(編號 int not null,
+年月 int not null,
+監測項目 varchar(20) null,
+監測站 varchar(20) null,
+監測站編號 varchar(20) null,
+月平均 float null,
+primary key (編號));
+
+create table 懸浮微粒
+(編號 int not null,
+年月 int not null,
+監測項目 varchar(20) null,
+監測站 varchar(20) null,
+監測站編號 varchar(20) null,
+月平均 float null,
+primary key (編號));
+
+truncate table 一氧化碳
+truncate table 二氧化硫
+truncate table 二氧化氮
+truncate table 非甲烷碳氫化合物
+truncate table 臭氧
+truncate table 懸浮微粒
